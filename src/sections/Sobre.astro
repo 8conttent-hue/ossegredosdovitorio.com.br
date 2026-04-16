@@ -1,0 +1,46 @@
+---
+// Sobre-I: Process Detail - Design focado em metodologia e passos
+interface Stat { value: string; label: string; }
+interface Props {
+  title: string;
+  subtitle?: string;
+  content?: string;
+  image: string;
+  stats?: Stat[];
+  content?: string;
+}
+const { title, subtitle, content } = Astro.props;
+const desc = content || subtitle || '';
+
+const steps = [
+  { step: '01', title: 'Imersão Netnográfica', text: 'Observação participante em comunidades on-line de TEA.' },
+  { step: '02', title: 'Análise de Mídias', text: 'Decodificação dos padrões de interação em vídeos curtos.' },
+  { step: '03', title: 'Cuidado Especializado', text: 'Transposição dos achados para protocolos de enfermagem.' },
+  { step: '04', title: 'Impacto Social', text: 'Disseminação do conhecimento para famílias e profissionais.' }
+];
+---
+<section class="py-24 bg-white relative">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-20 mb-32">
+       <div class="lg:w-1/2">
+          <span class="text-[10px] font-black uppercase text-primary tracking-[0.4em] mb-6 block">Como Trabalhamos</span>
+          <h1 class="text-4xl md:text-6xl font-black text-dark tracking-tighter mb-8 leading-none italic uppercase">{title}</h1>
+          <p class="text-xl text-gray-500 font-medium leading-relaxed italic mb-10">"{desc}"</p>
+          <div class="h-1 w-20 bg-primary"></div>
+       </div>
+       <div class="lg:w-1/2 grid grid-cols-2 gap-8 relative">
+          <!-- Connecting Line -->
+          <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-100 -z-0"></div>
+          <div class="absolute top-1/2 left-0 right-0 h-px bg-gray-100 -z-0"></div>
+          
+          {steps?.map(s => (
+             <div class="relative bg-white p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all group z-10">
+                <div class="text-2xl font-black text-primary mb-6 group-hover:scale-125 transition-transform">{s.step}</div>
+                <h4 class="text-sm font-black text-dark uppercase tracking-widest mb-4">{s.title}</h4>
+                <p class="text-[10px] font-bold text-gray-400 leading-relaxed uppercase tracking-widest">{s.text}</p>
+             </div>
+          ))}
+       </div>
+    </div>
+  </div>
+</section>

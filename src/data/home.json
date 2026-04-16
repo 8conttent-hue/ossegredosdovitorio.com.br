@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "OSSEGREDOSDOVITORIO — Transforme sua visão sobre Marketing Digital",
+    "description": "Experiências únicas e resultados extraordinários para o seu e-commerce."
+  },
+  "hero": {
+    "title": "Transforme sua visão sobre Marketing Digital",
+    "subtitle": "Experiências únicas e resultados extraordinários para o seu e-commerce.",
+    "btnText": "Descubra nossos serviços",
+    "bgImage": "/images/hero.jpg",
+    "btnLink": "/blog"
+  },
+  "features": {
+    "title": "Por que escolher a Os Segredos do Vitório?",
+    "items": [
+      {
+        "icon": "🚀",
+        "title": "Abordagem Personalizada",
+        "desc": "Analisamos suas necessidades e criamos estratégias sob medida para seu negócio."
+      },
+      {
+        "icon": "💡",
+        "title": "Expertise Comprovada",
+        "desc": "Com mais de 14 anos de experiência, já ajudamos inúmeras empresas a alcançarem seus objetivos."
+      },
+      {
+        "icon": "🤝",
+        "title": "Parceiros na sua jornada",
+        "desc": "Trabalhamos ao seu lado, compartilhando conhecimento e sempre disponíveis para apoiar seu crescimento."
+      }
+    ]
+  },
+  "about": {
+    "title": "Quem somos?",
+    "desc": "Fundada em 2009, a Os Segredos do Vitório é uma agência de marketing digital que transforma a maneira como as empresas enxergam suas estratégias online. Nossa missão é empoderar e capacitar negócios, especialmente e-commerces, através de conhecimento e inovação.",
+    "stats": [
+      {
+        "value": "105+",
+        "label": "Sites entregues"
+      },
+      {
+        "value": "Milhares",
+        "label": "de ações realizadas"
+      }
+    ],
+    "image": "/images/about.jpg",
+    "btnText": "Saiba Mais",
+    "btnLink": "/sobre"
+  },
+  "posts": {
+    "title": "Últimos Artigos",
+    "limit": 3,
+    "btnText": "Ver Blog",
+    "btnLink": "/blog"
+  }
+}

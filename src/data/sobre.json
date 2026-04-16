@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Sobre Nós",
+    "description": "Conheça o OSSEGREDOSDOVITORIO"
+  },
+  "hero": {
+    "title": "Sobre Nós",
+    "subtitle": "Fundada em 2009, a Os Segredos do Vitório é uma agência de marketing digital que transforma a maneira como as empresas enxergam suas estratégias online. Nossa missão é empoderar e capacitar negócios, especialmente e-commerces, através de conhecimento e inovação."
+  },
+  "content": "Nós, do Os Segredos do Vitório, acreditamos profundamente no poder da informação e em como ela pode mudar vidas e negócios. Nosso compromisso é com a transparência, aprendizado contínuo e resultados tangíveis para nossos clientes.",
+  "mission": "Nossa missão é compartilhar conhecimento e proporcionar experiências únicas que levem nossos clientes ao sucesso no mundo digital.",
+  "image": "/images/sobre.jpg",
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Artigos"
+    },
+    {
+      "value": "100k+",
+      "label": "Leitores"
+    },
+    {
+      "value": "5",
+      "label": "Redatores"
+    }
+  ],
+  "team": []
+}

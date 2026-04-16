@@ -1,0 +1,53 @@
+{
+  "name": "OSSEGREDOSDOVITORIO",
+  "slug": "ossegredosdovitorio.com.br",
+  "description": "NÓS ENXERGAMOS O MUNDO DE FORMA DIFERENTE. Nós, do Os segredos do Vitório queremos mudar a forma que você enxerga uma agência de marketing digital. Quem nos contrata tem experiências únicas de processo de trabalho, muita pró-atividade, organização e talento que são fundamentais para atingir os objetivos propostos para o projeto. Primeiro, o que nos move a trabalhar todos os dias é a vontade de compartilhar conhecimentos com todas as empresas donas de e-commerce. Fazemos isso por puro amor a nossa missão, ao nosso propósito e à nossa profissão. Mesmo que muitos clientes tenham chegado até nós após lerem algum conteúdo no nosso blog, temos a certeza que estamos fazendo a coisa certa, que estamos mudando vidas e que esse blog para compartilhamento de conteúdos conhecimentos sobre e-commerce, táticas e estratégias, é o maior ápice de amor ao próximo que podemos ter. São vários e vários comentários de pessoas que gostaram dos nossos conteúdos, e isso é digno demais. Hoje, em 2018, estamos reformulando tudo, mas já aviso de antemão que a cada dia mais você irá se surpreender. Sobre a Empresa A nossa empresa ajuda desde 2009 seus clientes crescerem. Entregamos mais de 105 sites e milhares de outras ações que fizeram nossos clientes inovar e obter resultados. Nossa equipe, formada por profissionais de marketing, publicidade e jornalismo, além de um viés analítico e gestor de negócios.  Tudo isso nos torna especialistas em marketing digital, criação de sites e gestão de mídias sociais. Mais que tudo isso.",
+  "url": "https://ossegredosdovitorio.com.br",
+  "niche": "Marketing Digital",
+  "keywords": "NOS ENXERGAMOS O MUNDO DE FORMA DIFERENTE Nos do Os segredos do",
+  "email": "contato@ossegredosdovitorio.com.br",
+  "palette": "ocean",
+  "colors": {
+    "primary": "#0ea5e9",
+    "accent": "#0369a1",
+    "dark": "#0c4a6e"
+  },
+  "headerContrast": "light",
+  "font": "inter",
+  "fontFamily": "'Inter', sans-serif",
+  "fontUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+  "components": {
+    "header": "Header-B",
+    "hero": "Hero-D",
+    "features": "Features-D",
+    "about": "About-H",
+    "posts": "Posts-G",
+    "footer": "Footer-B",
+    "sobre": "Sobre-I",
+    "contato": "Contato-H"
+  },
+  "menu": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Sobre",
+      "href": "/sobre"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "twitter": "",
+    "youtube": ""
+  }
+}
