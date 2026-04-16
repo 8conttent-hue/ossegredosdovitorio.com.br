@@ -39,27 +39,54 @@ export interface Post extends PostMeta {
 
 async function fetchDbPostsWithRetry(numericId: number, maxAttempts = 3): Promise<any[]> {
   if (!supabase) return [];
-  let lastError: any = null;
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    const ctrl = new AbortController();
-    const timeout = setTimeout(() => ctrl.abort(), 7000);
-    try {
-      const { data: dbPosts, error: dbError } = await supabase
-        .from('posts')
-        // listagem não precisa do campo content (muito pesado)
-        .select('slug,title,description,pub_date,hero_image,category')
-        .eq('network_site_id', numericId)
-        .eq('is_published', true)
-        .order('pub_date', { ascending: false })
-        .abortSignal(ctrl.signal);
-      if (!dbError) return dbPosts || [];
-      lastError = dbError;
-    } finally {
-      clearTimeout(timeout);
+
+  const allPosts: any[] = [];
+  const pageSize = 500;
+  let offset = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    let pageError: any = null;
+    let pageSuccess = false;
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      const ctrl = new AbortController();
+      const timeout = setTimeout(() => ctrl.abort(), 7000);
+      try {
+        const { data: dbPosts, error: dbError } = await supabase
+          .from('posts')
+          .select('slug,title,description,pub_date,hero_image,category')
+          .eq('network_site_id', numericId)
+          .eq('is_published', true)
+          .order('pub_date', { ascending: false })
+          .range(offset, offset + pageSize - 1)
+          .abortSignal(ctrl.signal);
+
+        if (!dbError) {
+          if (dbPosts && dbPosts.length > 0) {
+            allPosts.push(...dbPosts);
+            offset += pageSize;
+            hasMore = dbPosts.length === pageSize;
+          } else {
+            hasMore = false;
+          }
+          pageSuccess = true;
+          break;
+        }
+        pageError = dbError;
+      } finally {
+        clearTimeout(timeout);
+      }
+      if (attempt < maxAttempts) await sleep(250 * attempt);
     }
-    if (attempt < maxAttempts) await sleep(250 * attempt);
+
+    if (!pageSuccess) {
+      console.error(`[fetchDbPosts] Falha ao buscar página offset=${offset}:`, pageError);
+      break;
+    }
   }
-  throw lastError;
+
+  return allPosts;
 }
 
 function parseFrontmatter(raw: string): { meta: Record<string, any>; body: string } {
